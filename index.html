@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | 3-column preview card component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* font-family: 'Big Shoulders Display', cursive;
+      font-family: 'Lexend Deca', sans-serif; */
+      body {
+        max-width: 1440px;
+        max-height: 700px;
+      }
+
+      .attribution {
+        position: absolute;
+        top: 300vh;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 11px;
+        font-family: Helvetica, Arial, sans-serif;
+        text-align: center;
+        width: 100%;
+        color: black;
+        font-weight: bold;
+      }
+      .attribution a {
+        color: crimson;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      img {
+        width: 115px;
+        margin-bottom: 40px;
+      }
+
+      div.wrap {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      div.title {
+        text-transform: uppercase;
+        font-family: "Big Shoulders Display", cursive;
+        font-size: 34px;
+        color: hsl(0, 0%, 95%);
+        margin-bottom: 40px;
+      }
+
+      div.description {
+        font-family: "Lexend Deca", sans-serif;
+        font-size: 26px;
+        color: hsla(0, 0%, 100%, 0.75);
+        margin-bottom: 40px;
+      }
+
+      div.button {
+        position: relative;
+        width: 190px;
+        height: 50px;
+        background-color: hsl(0, 0%, 95%);
+        border-radius: 100px;
+      }
+
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: "Lexend Deca", sans-serif;
+      }
+
+      span.orange {
+        color: hsl(31, 77%, 52%);
+      }
+
+      span.darkcyan {
+        color: hsl(184, 100%, 22%);
+      }
+
+      span.verydarkcyan {
+        color: hsl(179, 100%, 13%);
+      }
+
+      div.sedans,
+      div.suvs,
+      div.luxury {
+        padding: 50px;
+      }
+      div.sedans {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        background-color: hsl(31, 77%, 52%);
+      }
+      div.suvs {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        background-color: hsl(184, 100%, 22%);
+      }
+      div.luxury {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        background-color: hsl(179, 100%, 13%);
+      }
+
+      @media (min-width: 1440px) {
+        body {
+          background-color: cornflowerblue;
+        }
+
+        div.wrap {
+          flex-direction: row;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 920px;
+          height: 500px;
+        }
+        div.sedans,
+        div.suvs,
+        div.luxury {
+          justify-content: space-between;
+          height: 100%;
+        }
+
+        img {
+          width: 70px;
+          height: 46px;
+          margin-bottom: 30px;
+        }
+        div.title {
+          font-size: 30px;
+          margin-bottom: 30px;
+        }
+        div.description {
+          font-size: 15px;
+          margin-bottom: 30px;
+          line-height: 25px;
+        }
+
+        div.button {
+          width: 166px;
+          height: 48px;
+        }
+
+        span {
+          font-size: 15px;
+        }
+        .attribution {
+          top: calc(100vh - 18px);
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="sedans">
+        <img src="/images/icon-sedans.svg" alt="" />
+        <div class="title"><h1>Sedans</h1></div>
+        <div class="description">
+          <p>
+            Choose a sedan for its affordability and excellent fuel economy.
+            Ideal for cruising in the city or on your next road trip.
+          </p>
+        </div>
+        <div class="button"><span class="orange">Learn More</span></div>
+      </div>
+      <div class="suvs">
+        <img src="/images/icon-suvs.svg" alt="" />
+        <div class="title"><h1>SUVs</h1></div>
+        <div class="description">
+          <p>
+            Take an SUV for its spacious interior, power, and versatility.
+            Perfect for your next family vacation and off-road adventures.
+          </p>
+        </div>
+        <div class="button"><span class="darkcyan">Learn More</span></div>
+      </div>
+      <div class="luxury">
+        <img src="/images/icon-luxury.svg" alt="" />
+        <div class="title"><h1>Luxury</h1></div>
+        <div class="description">
+          <p>
+            Cruise in the best car brands without the bloated prices. Enjoy the
+            enhanced comfort of a luxury rental and arrive in style.
+          </p>
+        </div>
+        <div class="button"><span class="verydarkcyan">Learn More</span></div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">PaanKrab</a>.
+    </div>
+  </body>
+</html>
